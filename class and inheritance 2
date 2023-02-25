@@ -1,0 +1,32 @@
+void main(){
+Student student1 = Student('Student 1:', 17, 9);
+print('NAME : ${student1.name}');
+print('AGE  : ${student1.age}');
+print('GRADE: ${student1.grade}');
+student1.school('SCHOOL 1:');
+Student student2 = Student('Student 2:',13,6);
+print('NAME : ${student2.name}');
+print('AGE  : ${student1.age}');
+print('GRADE: ${student1.grade}');
+student2.school('SCHOOL 2:');
+ SuperStudent student3 = SuperStudent('Super Studenet 1', 17, 10);
+  print('NAME : ${student3.name}');
+  print('AGE  : ${student1.age}');
+  print('GRADE: ${student1.grade}');
+  student3.out('SUPER SCHOOL 1');
+}
+class Student {
+  String? name ;
+  int ? age ;
+  int ? grade ;
+Student(this.name,this.age,this.grade );
+void school(String schoolName){
+    print('SCHOOL : $schoolName');
+   }
+}
+class SuperStudent extends Student{
+  SuperStudent(String name , int age , int grade):super(name,age,grade);
+  void out (String sname){
+    print('SCHOOL : $sname');
+  }
+}
