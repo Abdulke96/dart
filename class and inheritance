@@ -1,0 +1,34 @@
+//class, inheritance ,
+void main(){
+  
+  Student student1 = Student('mario', 24);
+  print(student1.name);
+  print(student1.rank);
+  student1.pop();
+  Student student2 = Student('alex',25);
+  print(student2.name);
+  print(student2.rank);
+  student2.pop();
+  SuperStudent student3 = SuperStudent('jafar', 2);
+  print(student3.name);
+  print(student3.rank);
+  student3.out();
+}
+class Student{
+  String ? name;
+  double ? rank;
+  Student(String name, double rank ){
+  this.name = name;
+  this.rank = rank;
+  }
+  void pop(){
+  print('user logged in');
+ }   
+}
+class SuperStudent extends Student {
+  SuperStudent(String name, double rank):super(name, rank);
+  void out(){
+    print('published update');
+  }
+  
+}
